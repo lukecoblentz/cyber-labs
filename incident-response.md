@@ -81,8 +81,40 @@ In this lab, I performed a full incident response investigation by analyzing net
 ---
 
 ## Screenshots
-*(Add your lab screenshots here if available)*
+## Screenshots
 
+### Network Activity Timeline
+![Time Graph](screenshots/1-time-graph.jpg)
+
+This time graph shows spikes in network activity during the incident window, indicating abnormal behavior and potential data exfiltration.
+
+---
+
+### Suspicious Session Analysis
+![Session Details](screenshots/2-session-details.jpg)
+
+Detailed session analysis revealed FTP activity involving file transfers (.zip and .exe), suggesting unauthorized data movement and possible malware transfer.
+
+---
+
+### Compromised Credentials Evidence
+![FTP Credentials](screenshots/3-ftp-credential-email.jpg)
+
+An email containing FTP credentials was identified, confirming that sensitive login information was exposed and used by the attacker.
+
+---
+
+### Malware Activity Timeline
+![Keylogger Evidence](screenshots/4-keylogger-evidence.jpg)
+
+System timeline analysis revealed events associated with a keylogger, confirming malware installation and persistence on the compromised system.
+
+---
+
+### Phishing / Social Engineering Evidence
+![Phishing Email](screenshots/5-phishing.jpg)
+
+Email communications demonstrate social engineering tactics used to manipulate the user into installing malicious software, leading to system compromise.
 ---
 
 ## Conclusion
