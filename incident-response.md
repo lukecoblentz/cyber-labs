@@ -1,7 +1,7 @@
 # Incident Response & Forensic Analysis
 
 ## Overview
-In this lab, I performed a full incident response investigation by analyzing network traffic and disk artifacts to identify a potential security breach involving unauthorized data exfiltration.
+This project simulates a real-world incident response investigation involving credential compromise, malware infection, and data exfiltration. Network traffic and disk artifacts were analyzed to identify the attack vector, scope, and impact of the breach.
 
 ## Objective
 - Analyze a PCAP file for forensic evidence  
@@ -13,38 +13,38 @@ In this lab, I performed a full incident response investigation by analyzing net
 
 ## Tools Used
 - Wireshark  
-- Disk analysis tools  
-- Log analysis techniques  
+- Autopsy (Digital Forensics)  
+- Windows Event Logs  
 
 ---
 
 ## Investigation Summary
 
 ### 1. Network Traffic Analysis
-- Reviewed PCAP data using Wireshark
-- Identified suspicious traffic involving large file transfers
-- Observed communication between internal systems and an external IP
+- Reviewed PCAP data using Wireshark  
+- Identified suspicious traffic involving large file transfers  
+- Observed communication between internal systems and an external IP  
 
 ### 2. Indicators of Compromise (IOCs)
-- External IP: `157.165.0.25`
-- Internal server: `172.31.0.20`
-- Multiple `.zip` file transfers detected
-- Use of compromised FTP credentials
+- External IP: `157.165.0.25`  
+- Internal server: `172.31.0.20`  
+- Multiple `.zip` file transfers detected  
+- Use of compromised FTP credentials  
 
 ### 3. Timeline of Events
-- Incident Occurred: July 13, 2021 (15:31–15:33)
-- Incident Discovered: July 31, 2021
-- Incident Reported: July 31, 2021
+- Incident Occurred: July 13, 2021 (15:31–15:33)  
+- Incident Discovered: July 31, 2021  
+- Incident Reported: July 31, 2021  
 
 ### 4. Root Cause
-- Credentials were exposed through an email containing FTP login information
-- Unauthorized access allowed external attacker to exfiltrate sensitive data
+- Credentials were exposed through an email containing FTP login information  
+- Unauthorized access allowed an external attacker to exfiltrate sensitive data  
 
 ---
 
 ## Impact Assessment
 - Systems affected:
-  - Employee workstation
+  - Employee workstation  
   - Internal FTP server  
 - Data at risk:
   - Confidential company files  
@@ -59,7 +59,8 @@ In this lab, I performed a full incident response investigation by analyzing net
 - Identified compromised systems and accounts  
 - Traced unauthorized file transfers  
 - Documented attack timeline and scope  
-- Classified incident severity as **HIGH**
+- Classified incident severity as **HIGH**  
+- Correlated network and host-based evidence to confirm the attack path  
 
 ---
 
@@ -80,7 +81,6 @@ In this lab, I performed a full incident response investigation by analyzing net
 
 ---
 
-## Screenshots
 ## Screenshots
 
 ### Network Activity Timeline
@@ -115,7 +115,8 @@ System timeline analysis revealed events associated with a keylogger, confirming
 ![Phishing Email](screenshots/5-phishing.jpg)
 
 Email communications demonstrate social engineering tactics used to manipulate the user into installing malicious software, leading to system compromise.
+
 ---
 
 ## Conclusion
-This lab simulated a real-world cybersecurity incident involving credential compromise and data exfiltration. Through forensic analysis and structured investigation, I was able to identify the attack vector, assess the impact, and document the incident response process.
+This project demonstrates a complete incident response workflow, from initial detection to root cause analysis. By combining network traffic analysis and forensic investigation, the attack was identified as a credential compromise leading to data exfiltration and malware infection. This highlights the importance of monitoring, user awareness, and layered security controls.
