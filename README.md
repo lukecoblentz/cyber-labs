@@ -9,7 +9,7 @@ This repository documents hands-on coursework involving network traffic inspecti
 | Project | Focus | Tools | Documentation |
 |---|---|---|---|
 | **Incident Response & Forensic Analysis** | Investigating suspicious transfers, compromised credentials, and attack timelines in a simulated scenario | Wireshark, Autopsy, Windows Event Logs | [View case study](incident-response.md) |
-| **Network Traffic Analysis** | Inspecting network protocols, comparing plaintext and encrypted communications, and analyzing wireless traffic | Wireshark, Kali Linux | [View case study](packet-analysis.md) |
+| **Network Traffic Analysis** | Inspecting network protocols, documenting an SFTP transfer, and analyzing wireless traffic | Wireshark, FileZilla, Kali Linux | [View case study](packet-analysis.md) |
 | **Vulnerability Assessment & Penetration Testing** | Host discovery, service enumeration, vulnerability assessment, and risk-based remediation | Nmap, Zenmap, Nessus, Kali Linux | [View case study](vulnerability-assessment.md) |
 
 ## Areas of Practice
@@ -24,6 +24,7 @@ This repository documents hands-on coursework involving network traffic inspecti
 ```text
 cyber-labs/
 ├── README.md
+├── EVIDENCE-REVIEW.md
 ├── incident-response.md
 ├── packet-analysis.md
 ├── vulnerability-assessment.md
@@ -33,11 +34,11 @@ cyber-labs/
     └── va-*.jpg  # Vulnerability assessment
 ```
 
-Each project document contains its own objectives, analysis, screenshots, and takeaways. Follow the links in the project table to explore them.
+Each project document contains its own objectives, analysis, screenshots, and takeaways. The screenshots are educational-lab artifacts; captions distinguish visible evidence from interpretation. Follow the links in the project table to explore them.
 
 ## Context & Responsible Use
 
-These are **coursework case studies in controlled training environments**, not claims of authorized testing against production networks. The screenshots illustrate specific lab observations and should be interpreted alongside the individual write-ups. Information from a course scenario is presented for educational purposes.
+These are **coursework case studies in controlled training environments**, not claims of authorized testing against production networks. The screenshots illustrate specific lab observations and should be interpreted alongside the individual write-ups. A FileZilla screenshot displays **SFTP** (not plaintext FTP), and the case-study login values in the incident-response image have been redacted. See [Evidence Review](EVIDENCE-REVIEW.md) for details. Information from a course scenario is presented for educational purposes.
 
 ## Related Work
 

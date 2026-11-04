@@ -13,6 +13,7 @@ This project simulates a real-world incident response investigation involving cr
 
 ## Tools Used
 - Wireshark  
+- NetWitness Investigator  
 - Autopsy (Digital Forensics)  
 - Windows Event Logs  
 
@@ -83,38 +84,34 @@ This project simulates a real-world incident response investigation involving cr
 
 ## Screenshots
 
-### Network Activity Timeline
-![Time Graph](screenshots/ir-1-time-graph.jpg)
+*Images are from a simulated course environment. Captions describe what each screenshot visibly supports; see [Evidence Review](EVIDENCE-REVIEW.md).*
 
-This time graph shows spikes in network activity during the incident window, indicating abnormal behavior and potential data exfiltration.
-
----
 
 ### Suspicious Session Analysis
 ![Session Details](screenshots/ir-2-session-details.jpg)
 
-Detailed session analysis revealed FTP activity involving file transfers (.zip and .exe), suggesting unauthorized data movement and possible malware transfer.
+The NetWitness session details show traffic involving an external address, an internal host, FTP activity, ZIP filenames, and an executable filename. These are investigation leads; the screenshot alone does not establish that each file was malicious or exfiltrated.
 
 ---
 
 ### Compromised Credentials Evidence
 ![FTP Credentials](screenshots/ir-3-ftp-credential-email.jpg)
 
-An email containing FTP credentials was identified, confirming that sensitive login information was exposed and used by the attacker.
+An email in the educational case-study dataset contains FTP connection details in its body. The host and login values are redacted in this public version. The email supports a credential-exposure finding; the broader investigation is needed to assess misuse.
 
 ---
 
 ### Malware Activity Timeline
 ![Keylogger Evidence](screenshots/ir-4-keylogger-evidence.jpg)
 
-System timeline analysis revealed events associated with a keylogger, confirming malware installation and persistence on the compromised system.
+Autopsy timeline entries include file activity associated with an `ActualKeylogger` path. These artifacts support investigation of possible keylogger installation; the screenshot by itself does not prove execution or persistence.
 
 ---
 
 ### Phishing / Social Engineering Evidence
 ![Phishing Email](screenshots/ir-5-phishing.jpg)
 
-Email communications demonstrate social engineering tactics used to manipulate the user into installing malicious software, leading to system compromise.
+An email in the lab dataset includes instructions to install a keylogger and a related link. It documents a social-engineering indicator; installation and impact require corroborating forensic evidence.
 
 ---
 

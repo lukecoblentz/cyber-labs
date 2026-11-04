@@ -13,6 +13,7 @@ This project demonstrates network traffic analysis using Wireshark to inspect an
 
 ## Tools Used
 - Wireshark  
+- FileZilla  
 - Kali Linux  
 - Network simulation environment  
 
@@ -20,10 +21,10 @@ This project demonstrates network traffic analysis using Wireshark to inspect an
 
 ## Analysis Summary
 
-### 1. File Transfer Traffic (FTP vs SFTP)
-- Observed FTP traffic transmitting data in plaintext  
-- Identified file transfers including credentials and filenames  
-- Compared with SFTP traffic, which encrypts all communication  
+### 1. File Transfer Security (SFTP and FTP comparison)
+- Observed a **FileZilla SFTP session** connecting to a simulated server and listing transferred files  
+- Compared SFTP (transport over SSH) with the confidentiality risks of traditional plaintext FTP  
+- Identified filenames and session status in the SFTP client; the available image **does not show plaintext FTP credentials**  
 
 ### 2. ICMP Packet Analysis
 - Analyzed ICMP packets (ping requests and replies)  
@@ -80,10 +81,13 @@ This project demonstrates network traffic analysis using Wireshark to inspect an
 
 ## Screenshots
 
-### FTP File Transfer (Unencrypted Traffic)
-![FTP Traffic](screenshots/pa-1-ftp-transfer.jpg)
+*Screenshots document the visible lab activities; they do not independently verify every conceptual comparison discussed above.*
 
-This screenshot shows FTP traffic where file transfers occur in plaintext, exposing sensitive information such as filenames and credentials.
+
+### FileZilla SFTP Transfer (Encrypted Protocol)
+![SFTP Client Transfer](screenshots/pa-1-sftp-transfer.jpg)
+
+The FileZilla client displays an `sftp://` connection, a remote file listing, and completed transfers in the simulated environment. This **is SFTP, not plaintext FTP**. The client screenshot illustrates an authenticated SFTP session, not packet-level proof of encrypted payloads.
 
 ---
 
